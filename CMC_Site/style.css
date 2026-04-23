@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header{
+    background:#460C0A;
+    border:3px solid #E1CF8B;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box{
+    width:60px;
+    height:60px;
+    border:2px solid #000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.brand{
+    font-size:42px;
+    font-family:Georgia, serif;
+    font-weight:bold;
+    letter-spacing:8px;
+    color:#E1CF8B;
+
+}
+
+.account{
+    text-align:center;
+    font-size:15px;
+    font-weight: bold;
+}
+
+.account i{
+    font-size:30px;
+}
+
+/* NAVIGATION */
+nav{
+    background:#753C1A;
+    border-left:2px solid #E1CF8B;
+    border-right:2px solid #E1CF8B;
+    border-bottom:2px solid #E1CF8B;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    flex:1;
+    min-width:120px;
+    text-align:center;
+    text-decoration:none;
+    color:#E1CF8B;
+    padding:10px;
+    background-color: #aa7e3b;
+    border:2px solid #E1CF8B;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* HERO SECTION */
+.hero{
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+.hero-content{
+    border:2px solid #E1CF8B;
+    background-color: #aa7e3b;
+    color: #971d1d;
+    width: 700px;
+    height: 70px;
+    margin:0 auto;
+    padding:10px 10px;
+    border-radius:  50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 45px;
+    border:2px solid #000;
+    border-radius:30px;
+    text-decoration:none;
+    color:#000;
+    font-weight:bold;
+    margin:10px;
+    background:white;
+}
+
+.btn2{
+    background: #E1CF8B;
+    border-radius: 30px;
+    height: 75px;
+    width: 75px;
+    padding:12px 15px;
+
+}
+
+.hero h2{
+    margin-top:30px;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.line{
+    width:70%;
+    margin-top: 5px;
+    margin:0 auto 40px;
+    border-top:3px solid #E1CF8B;
+}
+
+/* REALM SECTION */
+.realms{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    padding-bottom:80px;
+}
+
+.realm-card{
+    width:170px;
+    height:420px;
+    background:white;
+    border:3px solid #000;
+    border-radius:20px 20px 0 0;
+    position:relative;
+    text-align:center;
+    padding:25px 15px;
+    font-weight:bold;
+}
+
+/* Banner bottom point */
+.realm-card::after{
+    content:"";
+    position:absolute;
+    bottom:-1px;
+    left:50%;
+    transform:translateX(-50%);
+    width:0;
+    height:0;
+    border-left:40px solid transparent;
+    border-right:40px solid transparent;
+    border-top:28px solid white;
+}
+
+.realm-card::before{
+    content:"";
+    position:absolute;
+    bottom:-4px;
+    left:50%;
+    transform:translateX(-50%);
+    width:0;
+    height:0;
+    border-left:43px solid transparent;
+    border-right:43px solid transparent;
+    border-top:31px solid black;
+    z-index:-1;
+}
+
+.realm-card h3{
+    margin-bottom:35px;
+    font-size:20px;
+}
+
+.realm-card ul{
+    text-align:left;
+    font-size:14px;
+    margin-top:20px;
+    padding-left:18px;
+    font-weight:normal;
+    line-height:1.8;
+}
+
+/* FOOTER BLOCKS */
+footer{
+    border-top:2px solid #999;
+}
+
+.footer-box{
+    height:50px;
+    border-bottom:2px solid #999;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .brand{
+        font-size:28px;
+        letter-spacing:4px;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    .realm-card{
+        width:220px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+}
