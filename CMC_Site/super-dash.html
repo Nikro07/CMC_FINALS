@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard - CMC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3264f60e8b.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="admin">
+
+    <!-- Sidebar per Wireframe -->
+    <div class="sidebar">
+        <div class="profile-box"><i class="fa-solid fa-user-tie fa-3x"></i></div>
+ <a href="index.html" class="return-btn"><i class="fa-solid fa-house"></i> RETURN TO SITE</a>
+
+        <a href="#" class="nav-item">ACCOUNT</a>
+        <a href="#" class="nav-item">DASHBOARD</a>
+        <a href="#" class="nav-item">ANALYTIC</a>
+        <a href="#" class="nav-item">MANAGEMENT</a>
+        <button class="nav-item logout-btn" onclick="logout()" style="margin-top:auto; cursor:pointer;">LOG OUT</button>
+    </div>
+
+    <div class="main-wrapper">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo-area">
+                <div class="logo-box">LOGO</div>
+                <span>CMC</span>
+            </div>
+            <div class="logo-box"><i class="fa-solid fa-bell"></i></div>
+        </div>
+
+        <!-- Content Grid per Wireframe -->
+        <div class="dashboard-grid">
+            <div class="widget">Dashboard Overview</div>
+            <div class="widget tall">Quick Stats</div>
+            <div class="widget wide">Analytics Trends</div>
+            <div class="widget">User Activity</div>
+            <div class="widget">System Status</div>
+        </div>
+    </div>
+
+    <script>
+        // Gatekeeper
+        if (localStorage.getItem('userRole') !== 'Admin' && localStorage.getItem('userRole') !== 'Super Admin') {
+            window.location.href = "login.html";
+        }
+        function logout() {
+            localStorage.removeItem('userRole');
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

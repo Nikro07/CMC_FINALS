@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CMC</title>
+    <!-- External CSS link for your global styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/3264f60e8b.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body class = "super-admin">
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+        <!-- Profile Box from Wireframe -->
+        <div class="profile-container">
+            <i class="fa-solid fa-user-gear fa-3x"></i>
+        </div>
+ <a href="index.html" class="return-btn"><i class="fa-solid fa-house"></i> RETURN TO SITE</a>
+
+        <!-- Links from Sitemap -->
+        <a href="#" class="nav-btn">ACCOUNT</a>
+        <a href="#" class="nav-btn">DASHBOARD</a>
+        <a href="#" class="nav-btn">ANALYTIC</a>
+        <a href="#" class="nav-btn">MANAGEMENT</a>
+        
+        <!-- Logout Button -->
+        <button class="nav-btn logout-btn" id="logoutBtn">LOG OUT</button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="top-nav">
+            <div class="brand-logo">
+                <div class="logo-placeholder">LOGO</div>
+                <span class="brand-name">CMC</span>
+            </div>
+            <div class="utility-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </header>
+
+        <!-- WIDGET GRID LAYOUT (Matches image_69c155.png) -->
+        <section class="grid-container">
+            
+            <!-- Large Top Left Box -->
+            <article class="widget-card">
+                <span class="widget-title">Analytics Overview</span>
+            </article>
+
+            <!-- Tall Right Box -->
+            <article class="widget-card tall-widget">
+                <span class="widget-title">Notifications & Alerts</span>
+            </article>
+
+            <!-- Wide Middle Box -->
+            <article class="widget-card span-wide">
+                <span class="widget-title">Recent Activity</span>
+            </article>
+
+            <!-- Bottom Left Box -->
+            <article class="widget-card">
+                <span class="widget-title">User Management</span>
+            </article>
+
+            <!-- Bottom Right Box -->
+            <article class="widget-card">
+                <span class="widget-title">System Health</span>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- AUTHENTICATION & LOGOUT LOGIC -->
+    <script>
+        // Security Gatekeeper
+        const currentRole = localStorage.getItem('userRole');
+        if (currentRole !== 'Admin' && currentRole !== 'Super Admin') {
+            alert("Unauthorized access. Redirecting to login.");
+            window.location.href = "login.html";
+        }
+
+        // Logout Action
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            localStorage.removeItem('userRole');
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

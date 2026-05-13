@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" data-page="index.html">
+  <head>
+    <title>CMC Site</title>
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css"/>
+    <script defer src="script2.js"></script>
+  </head>
+  <style>
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #5c1010, #2b0505);
+      margin: 0;
+      padding: 0;
+    }
+
+  </style>
+
+  <body>
+  <script src="https://kit.fontawesome.com/3264f60e8b.js" crossorigin="anonymous"></script>	
+
+<div class="intro-bg"></div>
+<div class="intro-logo2">
+    <img src="MAIN_LogoTRANS.png" alt="CMC Logo">
+</div>
+<div class="intro-text">Improve Your Style.</div>
+
+
+<header>
+        <div class="logo-area">
+            <a href = "#hero"><div class="logo-box"><img src = "MAIN_LOGO.png" alt="CMC Logo"></div></a>
+            <div class="brand">CMC</div>
+        </div>
+
+    <div class="account">
+<div id="auth-controls" style="display: flex; gap: 15px; align-items: center;">
+    <div id="dashboard-links"></div>
+    <button id="logoutBtn" class="sign-in-btn" style="display:none; padding: 5px 15px;">Logout</button>
+</div>        
+           <div class = "btn2"> <a href="login.html"><i class="fa-solid fa-circle-user"></i></a><br>Login</div>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Minigames.html">Minigames</a>
+    <a href="Merch.html">Merch</a>
+<div class="dropdown">
+        <a href="#" class="dropbtn">Events <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+            <a href="Events.html">On-going</a>
+            <a href="Events-Archive.html">Archive</a>
+        </div>
+    </div>
+    <a href="About.html">About Us</a>
+    <a href="Contact.html">Contact</a>  
+</nav>
+
+<!-- SHOPPING CART SIDEBAR -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Loot</h3>
+        <button onclick="toggleCart()" class="close-cart">×</button>
+    </div>
+    <div id="cart-items">
+        <!-- Items will appear here via JS -->
+        <p style="text-align:center; padding-top: 20px; opacity: 0.5;">Your bag is empty.</p>
+    </div>
+    <div class="cart-footer">
+        <p>Total: ₱<span id="cart-total">0</span></p>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+<!-- HERO SECTION (Per image_add717.png) -->
+<section class="merch-hero">
+    <div class="hero-banner">
+        <h1>CREATIVE MINDS MERCH</h1>
+        <p>Exclusive gear for the CMC community.</p>
+    </div>
+</section>
+
+<!-- STICKERS & TRINKETS (Small Grid) -->
+<section class="merch-section">
+    <h2 class="news-title">Stickers & Trinkets</h2>
+    <div class="merch-grid small">
+        <div class="item-card">
+            <div class="item-img"><img src="merch/sticker1.png" alt="Sticker"></div>
+            <div class="item-info">
+                <h4>CMC Holographic Sticker</h4>
+                <p>₱50.00</p>
+                <button class="add-btn">Add to Bag</button>
+            </div>
+        </div>
+        <!-- Duplicate this item-card for more stickers -->
+    </div>
+</section>
+
+<!-- CLOTHES & POSTERS (Large Grid) -->
+<section class="merch-section">
+    <h2 class="news-title">Clothes & Posters</h2>
+    <div class="merch-grid large">
+        <div class="item-card">
+            <div class="item-img"><img src="merch/hoodie.png" alt="Hoodie"></div>
+            <div class="item-info">
+                <h4>CMC "Marahuyo" Hoodie</h4>
+                <p>₱1,200.00</p>
+                <button class="add-btn">Add to Bag</button>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-img"><img src="merch/poster_art.png" alt="Poster"></div>
+            <div class="item-info">
+                <h4>Limited Edition Film Poster</h4>
+                <p>₱350.00</p>
+                <button class="add-btn">Add to Bag</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="scroll-note">
+    <p>More merch when you scroll down</p>
+    <i class="fa-solid fa-arrow-down"></i>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <!-- Left Side: Navigation & Copyright -->
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Minigames</a>
+                <a href="#">Merch</a>
+                <a href="#">Events</a>
+                <a href="#">About</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="copyright">© 2026, Creative Minds Consortium. All Rights Reserved.</p>
+        </div>
+
+        <!-- Middle: Standalone Links -->
+        <a href="#" class="footer-special-link">Newsletter</a>
+        <a href="#" class="footer-special-link">TOS</a>
+
+        <!-- Right Side: Social Media -->
+        <div class="footer-right">
+            <span>Social Media</span>
+            <div class="social-icons">
+                <a href="#" class="social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook" style="color: rgb(225, 207, 139);"></i></a>
+                <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter" style="color: rgb(225, 207, 139);"></i></a>
+                <a href="#" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram" style="color: rgb(225, 207, 139);"></i ></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    function toggleCart() {
+        document.getElementById('cart-sidebar').classList.toggle('open');
+    }
+</script>
+
+  </body>
+</html>

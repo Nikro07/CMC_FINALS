@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login - CMC Site</title>
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="stylesheet" href="style.css" />
+    
+    <script src="https://kit.fontawesome.com/3264f60e8b.js" crossorigin="anonymous"></script>
+
+  </head>  
+
+    <body class = "login">
+
+    <!-- Top Left Text per Wireframe -->
+    <div class="account-header">Account</div>
+
+    <div class="login-container">
+      <div class="login-card">
+        
+        <!-- Back Button per Wireframe -->
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+
+        <!-- Logo per Wireframe -->
+        <div class="login-logo">
+          <!-- Fallback to text if image is missing -->
+          <img src="MAIN_LogoTRANS.png" alt="Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-family: Georgia; font-size: 24px; color: #E1CF8B; font-weight: bold;\'>CMC</span>';">
+        </div>
+
+        <h2>LOG IN</h2>
+
+        <form class="login-form" id="loginForm">
+          <div class="input-group">
+            <label for="email">email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="input-group">
+            <label for="password">password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+
+          <!-- Forgot Password per wireframe -->
+          <a href="#" class="forgot-pass">forgot pass?</a>
+
+          <!-- Sign In Button per Wireframe -->
+          <button type="submit" class="sign-in-btn">Sign In</button>
+        </form>
+
+        <!-- Informational box to show available test accounts -->
+        <div class="demo-credentials">
+          <p><strong>Demo Accounts:</strong></p>
+          <p>User: <span>user@cmc.edu</span> / <span>user123</span></p>
+          <p>Admin: <span>admin@cmc.edu</span> / <span>admin123</span></p>
+          <p>Super: <span>super@cmc.edu</span> / <span>super123</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Login Logic Script -->
+    <script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const email = document.getElementById('email').value;
+  const pass = document.getElementById('password').value;
+
+  const accounts = {
+    "user@cmc.edu": { password: "user123", role: "User" },
+    "admin@cmc.edu": { password: "admin123", role: "Admin" },
+    "super@cmc.edu": { password: "super123", role: "Super Admin" }
+  };
+
+  if (accounts[email] && accounts[email].password === pass) {
+    // Save role to localStorage so other pages can see it
+    localStorage.setItem('userRole', accounts[email].role);
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid credentials.");
+  }
+});
+    </script>
+  </body>
+</html>
